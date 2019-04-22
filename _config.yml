@@ -1,0 +1,13 @@
+# Site Settings
+
+title: Personal Blg
+email: desterhuizen@gmail.com
+author: DH Esterhuizen
+description:
+url: https://desterhuizen.uk
+
+# Build Settings
+
+permalink: /blog/:year/:month/:day/:title
+sass:
+  sass_dir: css
