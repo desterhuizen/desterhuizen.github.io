@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Dawid Esterhuizen's - Résumé 
+title: CV 
 ---
-
 # {{page.title}}
