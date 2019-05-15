@@ -2,7 +2,7 @@
 layout: default
 ---
 <p>
-    > cat ./{{page.title | replace:' ','_'}}.sh
+    cat ./{{page.title | replace:' ','_' | downcase}}.sh
 </p>
 <hr/>
 <article>
@@ -11,8 +11,12 @@ layout: default
     </header>
     <blockquote>
         {{ content }}
-        {{ page.date | date: "%Y/%m/%d "  }}
     </blockquote>
+    <footer class="text-align-right">
+        <cite>
+            {{ page.date | date: "%Y/%m/%d "  }}
+        </cite>
+    </footer>
 
 </article>
 
