@@ -1,11 +1,32 @@
 ---
 layout: default
 ---
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h2 class="text-primary"></h2>
-            <p>Playing around with security</p>
-        </div>
-    </div>
-</div>
+
+<p>
+    Personal website, technical experiments.
+</p>
+<main>
+    <section>
+        > cd /blog/
+    </section>
+    <section>
+        > ls -l ./
+    </section>
+    {% for post in site.posts %}
+        <section>
+            <head>
+                > -r-------- root root {{post.title | size}}K {{ post.date | date: "%b %d %H:%M"}} <a href="{{ post.url }}">{{post.title | replace:' ','_' | downcase}}.sh</a>
+            </head>
+        </section>
+    {% endfor %}
+    <hr />
+    > head -n 1 ./*
+    {% for post in site.posts %}
+    <section>
+        <head>
+            > cat ./<a href="{{ post.url }}">{{ post.title | replace:' ','_' | downcase }}.sh</a>
+        </head>
+        {{ post.content | truncatewords: 12 | replace: '\n', ' ' }}
+    </section>
+    {% endfor %}
+</main>

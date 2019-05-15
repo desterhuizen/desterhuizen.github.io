@@ -1,13 +1,13 @@
-# Site Settings
+title: desterhuizen
+email: info@desterhuizen.uk
+description: >- # this means to ignore newlines until "baseurl:"
+  Personal blog and website.
+baseurl: ""
+url: "https://desterhuizen.uk"
 
-title: Personal Blog
-email: desterhuizen@gmail.com
-author: DH Esterhuizen
-description:
-url: https://desterhuizen.uk
+markdown: kramdown
+plugins:
+  - jekyll-feed
 
-# Build Settings
-
-permalink: /blog/:year/:month/:day/:title
 sass:
-  sass_dir: css
+  sass_dir: _sass

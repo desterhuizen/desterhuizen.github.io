@@ -1,9 +1,20 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
-<div class="post">
-    {{ content }}
+<p>
+    > cat ./{{page.title | replace:' ','_'}}.sh
+</p>
+<div class="terminal-card">
+    <header>
+        {{ page.title }}
+    </header>
+    <p>
+        {{ content }}
+    </p>
+    <header class="text-align-right">{{ page.date | date: "%Y/%m/%d "  }}</header>
+
 </div>
-<p class="meta"><a href="javascript:history.back()">Back</a></p>
+
+<p>
+    > <a href="/"><span>cd /</span></a>
+</p>

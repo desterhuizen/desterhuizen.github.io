@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
- {% include head.html %}
- <body>
- <div class="container" >
-     {% include header.html %}
-     {% include navigation.html %}
-     {{ content }}
- </div>
- {%include footer.html %}
- </body>
+{% include head.html %}
+<body class="terminal">
+    <div class="container">
+        {% include navigation.html %}
+    </div>
+    <div class="container">
+        <div class="components components-grid">
+            {{content}}
+        </div>
+    </div>
+    <div class="container">
+        <hr />
+        <ul>
+            <li><a href="https://linkedin.com/in/desterhuizen" target="_blank"><span><i class="fab fa-linkedin"></i> </span>desterhuizen</a></li>
+            <li><a href="https://keybase.io/desterhuizen" target="_blank"><span><i class="fab fa-keybase"></i> </span>desterhuizen</a></li>
+        </ul>
+    </div>
+    {% include footer.html %}
+</body>
 </html>
