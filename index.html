@@ -7,10 +7,10 @@ layout: default
 </p>
 <main>
     <section>
-        > cd /blog/
+        > cd /
     </section>
     <section>
-        > ls -l ./
+        > ls -l /
     </section>
     {% for post in site.posts %}
         <section>
@@ -20,13 +20,15 @@ layout: default
         </section>
     {% endfor %}
     <hr />
-    > head -n 1 ./*
+    > head -n 1 /*
     {% for post in site.posts %}
     <section>
         <head>
-            > cat ./<a href="{{ post.url }}">{{ post.title | replace:' ','_' | downcase }}.sh</a>
+            <a href="{{ post.url }}">cat /{{ post.title | replace:' ','_' | downcase }}.sh</a>
         </head>
+        <blockquote>
         {{ post.content | truncatewords: 12 | replace: '\n', ' ' }}
+        </blockquote>
     </section>
     {% endfor %}
 </main>

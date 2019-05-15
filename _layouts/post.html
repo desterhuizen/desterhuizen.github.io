@@ -4,17 +4,18 @@ layout: default
 <p>
     > cat ./{{page.title | replace:' ','_'}}.sh
 </p>
-<div class="terminal-card">
+<hr/>
+<article>
     <header>
         {{ page.title }}
     </header>
-    <p>
+    <blockquote>
         {{ content }}
-    </p>
-    <header class="text-align-right">{{ page.date | date: "%Y/%m/%d "  }}</header>
+        {{ page.date | date: "%Y/%m/%d "  }}
+    </blockquote>
 
-</div>
+</article>
 
 <p>
-    > <a href="/"><span>cd /</span></a>
+    <a href="/"><span>cd /</span></a>
 </p>
