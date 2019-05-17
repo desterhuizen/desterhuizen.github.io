@@ -8,7 +8,7 @@ layout: default
     <section>
         ls -l /
     </section>
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
         <section>
             <head>
                 > -r-------- root root {{post.title | size}}K {{ post.date | date: "%b %d %H:%M"}} <a href="{{ post.url }}">{{post.title | replace:' ','_' | downcase}}.sh</a>
@@ -17,7 +17,7 @@ layout: default
     {% endfor %}
     <hr />
     head -n 1 /*
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     <section>
         <head>
             <a href="{{ post.url }}">cat /{{ post.title | replace:' ','_' | downcase }}.sh</a>
@@ -27,4 +27,12 @@ layout: default
         </blockquote>
     </section>
     {% endfor %}
+    <section>
+        {% if paginator.previous_page != nil %}
+        <a href="{{paginator.previous_page}}">--Back--</a>
+        {% endif %}
+        {% if paginator.previous_page != nil %}
+        <a href="{{paginator.next_page}}">--More--</a>
+        {% endif %}
+    </section>
 </main>

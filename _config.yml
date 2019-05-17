@@ -5,9 +5,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url: "https://desterhuizen.uk"
 
+paginate: 5
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 sass:
   sass_dir: _sass
