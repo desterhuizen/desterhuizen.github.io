@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/desterhuizen
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://desterhuizen.uk
+  * I am desterhuizen (https://keybase.io/desterhuizen) on keybase.
+  * I have a public key ASAtO3gC1n1jf_iBzipVMgaE2tABtsOLh7BI08dZRoIV-go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01202d3b7802d67d637ff881ce2a55320684dad001b6c38b87b048d3c759468215fa0a",
+      "host": "keybase.io",
+      "kid": "01202d3b7802d67d637ff881ce2a55320684dad001b6c38b87b048d3c759468215fa0a",
+      "uid": "8d8d4d4dac5fa4e810d1fb6798deae19",
+      "username": "desterhuizen"
+    },
+    "merkle_root": {
+      "ctime": 1560496097,
+      "hash": "f35e51ade3a0b9639886e8d03ed3632eefc6609dd3e9579a727ebc08d3fb2c408cb756df24a4718560477a1fcf55edddcfb57c4222377798a2bbe5db35f7bea4",
+      "hash_meta": "8961d82002241c9a18d5849408617a1800c9e2bf3d068a1e2da938dd0bc44292",
+      "seqno": 5568995
+    },
+    "service": {
+      "entropy": "qeuFtsKYZMPwkP6HrSiQKNu/",
+      "hostname": "desterhuizen.uk",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.1.0"
+  },
+  "ctime": 1560496192,
+  "expire_in": 504576000,
+  "prev": "369dc5ff69c1c4a02bdf87fb2426453300a6e5080c2b19b73d8a572ca8d99a69",
+  "seqno": 33,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgLTt4AtZ9Y3/4gc4qVTIGhNrQAbbDi4ewSNPHWUaCFfoKp3BheWxvYWTESpcCIcQgNp3F/2nBxKAr34f7JCZFMwCm5QgMKxm3PYpXLKjZmmnEIIxvHc/rL4gNrOVgdp+YhSpdKiG1ybwZw4hCOxcPmlpcAgHCo3NpZ8RAlqmUD7z/nnr/H1aNiN/Fj1aepPqH1HV13SXZ9VofauSPgNyUb7bt0bRAaGSrQdHSNqd8kCqUlPV8msX4ipdAB6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINHmAmQB82bSvqEJt657N1J8XJP7IRN+k7Yq0mVE8K0eo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/desterhuizen
+
+==================================================================
