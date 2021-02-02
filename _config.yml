@@ -12,4 +12,5 @@ plugins:
   - jekyll-paginate
 
 sass:
+  style: normal
   sass_dir: _sass

@@ -8,13 +8,15 @@ layout: default
     <section>
         ls -l /
     </section>
+    <section>
+        <table class="main-ls">
     {% for post in paginator.posts %}
-        <section>
-            <head>
-                > -r-------- root root {{post.title | size}}K {{ post.date | date: "%b %d %H:%M"}} <a href="{{ post.url }}">{{post.title | replace:' ','_' | downcase}}.sh</a>
-            </head>
-        </section>
+        <tr>
+            <td> -r-------- root root </td> <td class="text-align-right">{{post.title | size}}K </td><td>{{ post.date | date: "%b %d %H:%M"}} </td><td> <a href="{{ post.url }}">{{post.title | replace:' ','_' | downcase}}.sh</a></td>
+        </tr>
     {% endfor %}
+        </table>
+    </section>
     <hr />
     head -n 1 /*
     {% for post in paginator.posts %}

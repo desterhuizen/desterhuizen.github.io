@@ -1,0 +1,30 @@
+---
+---
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+.main-ls {
+  tr{
+    td {
+      border: none;
+    }
+    td:nth-child(1) {
+      width: 195px;
+    }
+    td:nth-child(2) {
+      width: 40px;
+    }
+    td:nth-child(3) {
+      width: 120px;
+    }
+  }
+}
