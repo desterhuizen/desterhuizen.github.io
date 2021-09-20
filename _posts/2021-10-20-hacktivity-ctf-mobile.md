@@ -178,7 +178,7 @@ We are mainly interested in the com.reactor.MainActivity and looking in there we
 
 Digging a little we see the MainApplication class which seem to be loading index.
 
-![alt text](/assets/reactor_main_application.png)
+![alt text](/assets/reactor_main_applicaiton.png)
 
 ## Lets find index
 
