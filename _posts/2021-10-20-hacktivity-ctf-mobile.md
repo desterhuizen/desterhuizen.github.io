@@ -6,15 +6,15 @@ categories: security, ctf
 ---
 
 
-Taking part in the H@ctivityCon CTF 2021 doing the two mobile challenges
+Taking part in the H@ctivityCon CTF 2021 doing the two mobile challenges, I was able to recover the flag for two of the challenges.
 
-# ToDo - *(Easy)
+# ToDo *(Easy)
 
 ## Download the todo.apk file
 
 ![alt text](/assets/ToDo_challenge.png)
 
-## Verify the file type 
+## Verify the file type using file
 
 ```
 file todo.apk
@@ -23,7 +23,7 @@ todo.apk: Zip archive data, at least v0.0 to extract
 
 ## Extract the apk content using apktool.
 
-apktool is a used to reverse engineer Android APK tools, it can disassemble APK's and rebuild it into working APK's from the resources after changes.
+The apktool is a used to reverse engineer Android APKs, it can disassemble APK's and rebuild it into working APK's from the resources after changes are made.
 
 ```
 apktool d todo.apk -o ./todo_apk_content                                                                                                                                                                                                                     130 ⨯
@@ -41,7 +41,7 @@ I: Copying original files...
 I: Copying META-INF/services directory
 ```
 
-## Disassemble and fover the apk into a jar using dex2jar.
+## Disassemble the apk into a jar using dex2jar.
 
 ```
 todo.apk -o todo_jar.jar
@@ -54,7 +54,7 @@ Please report this file to one of following link if possible (any one).
     dex2jar@googlegroups.com
 ```
 
-## What is the main activity being used by the application
+## Find out what the main activity being used by the application is
 ```
 cat todo_apk_content/AndroidManifest.xml
 <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.congon4tor.todo" platformBuildVersionCode="30" platformBuildVersionName="11">
@@ -74,21 +74,23 @@ cat todo_apk_content/AndroidManifest.xml
 
 ![alt text](/assets/todo-jadx-gui.png)
 
-We can see in line 10 of the MyDatabase class we have todos.db
+We can see in line 10 of the MyDatabase class we have todos.db, lets see if we can find it.
 
 ## Review the content directory and see if we can find the db
+
 ```
  find . | grep todos.db                                                                                                                                                                                                                                         1 ⨯
 ./assets/databases/todos.db
 ```
 
-Lets see what type of DB this is
+Lets see what type of DB this is with file.
+
 ```
 file ./assets/databases/todos.db
 ./assets/databases/todos.db: SQLite 3.x database, last written using SQLite version 3031001
 ```
 
-## Lets read the SQLite db
+## Check the SQLite DB if we can log in and read the database.
 ```
 sqlite3 ./assets/databases/todos.db                                                                                                                                                                                                                          130 ⨯
 SQLite version 3.34.1 2021-01-20 14:10:07
@@ -101,6 +103,8 @@ sqlite> SELECT * FROM todo;
 sqlite> .quit
 ```
 
+These look promissing
+
 ## Decode the base64 
 ```
 echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" | base64 -d                                                                                                                                                                                         1 ⨯
@@ -109,7 +113,6 @@ flag{XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX}
 
 
 ```
-
  _______ 
 ( PWN!!! )
  ------- 
@@ -121,9 +124,9 @@ flag{XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX}
 ```
 
 
-#  Reactor - (Medium)
+#  Reactor (Medium)
 
-## Download and confirm the fiel type
+## Download and confirm the file type
 
 ![alt text](/assets/reactor-chanllenge.png)
 
@@ -155,7 +158,8 @@ d2j-dex2jar reactor.apk -o reactor_jar.jar
 dex2jar reactor.apk -> reactor_jar.jar
 ```
 
-## Lets have a look at the main Activity 
+
+## Lets have a look at the AndroidManifest to find the main Activity 
 
 ```
 cat reactor_apk_content/AndroidManifest.xml
@@ -172,7 +176,7 @@ cat reactor_apk_content/AndroidManifest.xml
 </manifest>
 ```
 
-We are mainly interested in the com.reactor.MainActivity and looking in there we only see and include to react.ReactActivity and a reference to facebook.react, it must be a reactNative application.
+We are mainly interested in the com.reactor.MainActivity class and looking in there we only see and include to react.ReactActivity and a reference to facebook.react, it must be a reactNative application.
 
 ![alt text](/assets/reactor_main_activity.png)
 
@@ -180,14 +184,14 @@ Digging a little we see the MainApplication class which seem to be loading index
 
 ![alt text](/assets/reactor_main_applicaiton.png)
 
-## Lets find index
+## Lets see  if we can find index in the extracted APK content.
 
 ```
 find reactor_apk_content | grep index
 reactor_apk_content/assets/index.android.bundle
 ```
 
-Whats in here 
+We find index.android.bundle, looing at this we see the javascript code, not very easy to read through.
 
 ```
 cat reactor_apk_content/assets/index.android.bundle
@@ -211,15 +215,19 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 172.16.92.1 - - [20/Sep/2021 15:09:22] "GET /reactor_apk_content/assets/index.android.bundle HTTP/1.1" 200 -
 ```
 
-## Decopile the react-native code 
-Using library https://github.com/richardfuca/react-native-decompiler
+![alt text](/assets/reactor_chrome_data.png)
 
+The code looks better, but still had to work with. If it was a simpler app it could be helpful.
+
+## Decopile the react-native code using react-native-decompiler
+
+We firrst have to install the packages and build the typescript project before we can use it. 
 ```
 git clone https://github.com/richardfuca/react-native-decompiler
 cd react-native-decompiler
 npm i
 npm run build
-// Even if there were errors it does work
+## Even if there were errors during compilation, it does still work
 ```
 
 ## Run the decompiler 
@@ -251,13 +259,22 @@ Took 496.88148299977183ms
 Done!
 
 cd ~/hacktivitycon/reactor/react_native_source/
-```
+ls -la
+total 464
+drwxr-xr-x 2 kali kali  4096 Sep 20 16:23 .
+drwxr-xr-x 4 kali kali  4096 Sep 20 16:13 ..
+-rw-r--r-- 1 kali kali   230 Sep 20 15:51 0.js
+-rw-r--r-- 1 kali kali   432 Sep 20 15:51 10.js
+....
+-rw-r--r-- 1 kali kali   444 Sep 20 15:51 8.js
+-rw-r--r-- 1 kali kali  1612 Sep 20 15:51 400.js
 
+mv null.cache ../     # I move the null cache as it is the original data blob. It hides the results.
+```
 
 We get 108 js files, numbered.
 
-
-## Install the applicaiont on a test Virtual Android 
+## Next we Install the applicaiont on a test Virtual Android 
 
 ```
 adb install reactor.apk
@@ -271,7 +288,6 @@ Success.
 
 ## Letfs find that in the decompiled code 
 ```
-mv react_native_source/null.cache ./     # I move the null cache as it is the original data blob. It hides the results.
 grep -R "Insert the pin to show the reactor codes" react_native_source/*
 
 react_native_source/399.js:      'Insert the pin to show the reactor codes.'
@@ -284,7 +300,6 @@ cat react_native_source/399.js
 
   const module23 = require('@babel/runtime/helpers/interopRequireDefault')(require('./23'));
   const React = (function (t, n) {
-  
   ....
   
   React.default.createElement(ReactNative.TextInput, {
@@ -312,11 +327,11 @@ exports.default = o;
 ```
 
 
-We can see the code has a max length of 4 and we call ("./400.js").decrypt(code) to decode the key, lets brute force this.
+We can see the code has a max length of 4 and we call ("./400.js").decrypt(code) to decrypt the key.
 
 Lets have a look at 400.js
 ```
- cat 400.js
+cat 400.js
 const module401 = require('@babel/runtime/helpers/interopRequireDefault')(require('./401'));
 
 const n = 'cccccccccccccccccccccccccccccccccccccccccccccccccccc';
@@ -341,13 +356,16 @@ module.exports.decrypt = function (c) {
   return o(c, module401.default.decode(n));
 };
 ```
+It creates and "o" Object that takes the input string, the decodes "n",  using the object.
 
 With a little cleanup we can run the decrypt function locally
 
 400.js
 ```
- cat 400.js                                                                                                                                                                                                                                                     1 ⨯
-const module401 = require('./401');
+cp 400.js exploit.js
+cat exploit.js
+
+const module401 = require('./401'); 
 
 const n = 'CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC';
 
@@ -359,13 +377,8 @@ function o(t, n) {
   for (let f = 0; f < n.length; ++f) {
     o += String.fromCharCode(c.charCodeAt(f) ^ n.charCodeAt(f));
   }
-
   return o;
 }
-
-module.exports.encrypt = function (n, c) {
-  return module401.default.encode(o(n, c));
-};
 
 function decrypt (c) {
   return o(c, module401.default.decode(n));
@@ -380,7 +393,8 @@ for (let i = 0; i < 10000; i++) {
 }
 ```
 
-ok let run the sucker: 
+This whould give us what we want...
+
 ```
 node 400.js
 flag{XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX}
