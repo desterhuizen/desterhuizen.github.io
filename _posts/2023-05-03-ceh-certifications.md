@@ -27,7 +27,7 @@ Here is an unrelated example:
 
 Identify this color
 
-![|200](/assets/color.png)
+<img width="200" src="/assets/color.png" />
 
 1. Iris
 2. Amethyst
@@ -64,12 +64,9 @@ Upon passing of both the Theoretical and Practical Exams I was awarded the [CEH 
 
 I found the CEH a good option to support my change in focus for my career. I believe existing knowledge I had helped me immensely, but the course provided me with the vocabulary and guidance to focus on the security of systems.
 
-
----
-CEH - Master: ![CEHMASTER_5FB43496785F.png](/assets/CEHMASTER_5FB43496785F.png)
-CEH - Theory: ![CEH_2E345519D3F7.png](/assets/CEH_2E345519D3F7.png)
-CEH - Practical: ![CEHPRACTICAL_5FB43496785F.png](/assets/CEHPRACTICAL_5FB43496785F.png)
----
+| Master                                                     | Theory                                     | Practical                                           |
+|------------------------------------------------------------|--------------------------------------------|-----------------------------------------------------|
+| <img src="/assets/CEHMASTER_5FB43496785F.png" width="200"/> | <img src="/assets/CEH_2E345519D3F7.png" width="200"/> | <img src="/assets/CEHPRACTICAL_5FB43496785F.png" width="200"/> |
 
 ## Conclusion 
 
