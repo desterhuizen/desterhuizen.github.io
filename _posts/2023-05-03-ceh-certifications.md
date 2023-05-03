@@ -27,7 +27,7 @@ Here is an unrelated example:
 
 Identify this color
 
-<img src="/assets/color.png" width="200px">
+<img src="/assets/color.png" class="limited-image">
 
 1. Iris
 2. Amethyst
@@ -66,7 +66,7 @@ I found the CEH a good option to support my change in focus for my career. I bel
 
 | Master                                                       | Theory                                                 | Practical                                                       |
 |--------------------------------------------------------------|--------------------------------------------------------|-----------------------------------------------------------------|
-| <img src="/assets/CEHMASTER_5FB43496785F.png" width="200px"> | <img src="/assets/CEH_2E345519D3F7.png" width="200px"> | <img src="/assets/CEHPRACTICAL_5FB43496785F.png" width="200px"> |
+| <img src="/assets/CEHMASTER_5FB43496785F.png" class="limited-image"> | <img src="/assets/CEH_2E345519D3F7.png" class="limited-image"> | <img src="/assets/CEHPRACTICAL_5FB43496785F.png" class="limited-image"> |
 
 ## Conclusion 
 
