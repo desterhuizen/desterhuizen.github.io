@@ -64,9 +64,9 @@ Upon passing of both the Theoretical and Practical Exams I was awarded the [CEH 
 
 I found the CEH a good option to support my change in focus for my career. I believe existing knowledge I had helped me immensely, but the course provided me with the vocabulary and guidance to focus on the security of systems.
 
-| ![CEHMASTER_5FB43496785F.png](/assets/CEHMASTER_5FB43496785F.png) | ![CEH_2E345519D3F7.png](/assets/CEH_2E345519D3F7.png) | ![CEHPRACTICAL_5FB43496785F.png](/assets/CEHPRACTICAL_5FB43496785F.png) |
 
- 
+|---|---|---|
+|![CEHMASTER_5FB43496785F.png](/assets/CEHMASTER_5FB43496785F.png)|![CEH_2E345519D3F7.png](/assets/CEH_2E345519D3F7.png)|![CEHPRACTICAL_5FB43496785F.png](/assets/CEHPRACTICAL_5FB43496785F.png)|
 
 ## Conclusion 
 
