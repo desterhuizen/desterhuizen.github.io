@@ -27,7 +27,7 @@ Here is an unrelated example:
 
 Identify this color
 
-![color](/assets/color.png)
+![color|200x200](/assets/color.png)
 
 1. Iris
 2. Amethyst
@@ -64,7 +64,8 @@ Upon passing of both the Theoretical and Practical Exams I was awarded the [CEH 
 
 I found the CEH a good option to support my change in focus for my career. I believe existing knowledge I had helped me immensely, but the course provided me with the vocabulary and guidance to focus on the security of systems.
 
-[<img width="200" height="200" src="https://aspen.eccouncil.org/Content/Badges/CertifiedBadges/CEHMASTER_5FB43496785F.png">](https://aspen.eccouncil.org/VerifyBadge?type=certification&a=VVUr2sh+obJViSmBkqkrXbilwSG7bu8Nqr+9ZhZ2aME=) | [<img width="200" height="200" src="https://aspen.eccouncil.org/Content/Badges/CertifiedBadges/CEH_2E345519D3F7.png">](https://aspen.eccouncil.org/VerifyBadge?type=certification&a=IklI8VJJRcrxRV0qYAV/BJuaHuJQzzWZ2mUvNTvpYh4=) | [<img width="200" height="200" src="https://aspen.eccouncil.org/Content/Badges/CertifiedBadges/CEHPRACTICAL_5FB43496785F.png">](https://aspen.eccouncil.org/VerifyBadge?type=certification&a=VVUr2sh+obJViSmBkqkrXVjmuctLmvVQxfYIGVXNbdU=) 
+![CEHMASTER_5FB43496785F.png|200x200](/assets/CEHMASTER_5FB43496785F.png)![CEH_2E345519D3F7.png|200x200](/assets/CEH_2E345519D3F7.png)![CEHPRACTICAL_5FB43496785F.png|200x200](/assets/CEHPRACTICAL_5FB43496785F.png)
+ 
 
 ## Conclusion 
 
