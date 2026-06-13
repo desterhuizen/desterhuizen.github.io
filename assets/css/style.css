@@ -113,6 +113,13 @@ h2{font-family:var(--disp);font-weight:800;font-stretch:106%;font-size:clamp(28p
 a.finding{text-decoration:none;display:flex;flex-direction:column}
 a.finding h3{transition:color .2s ease}
 a.finding:hover h3{color:var(--crit)}
+/* parity filler so an odd card count keeps the hairline grid clean */
+.finding.is-empty,.finding.is-empty:hover{background:var(--paper);cursor:default}
+@media(max-width:760px){.finding.is-empty{display:none}}
+
+/* "view all / back" link */
+.more-link{display:inline-block;margin-top:30px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);border-bottom:1px solid var(--rule);padding-bottom:3px;transition:color .15s ease,border-color .15s ease}
+.more-link:hover{color:var(--crit);border-color:var(--crit)}
 
 /* ---------- method ---------- */
 .method{display:grid;grid-template-columns:280px 1fr;gap:60px}

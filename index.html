@@ -171,22 +171,18 @@ layout: default
       </div>
       <p class="mono" style="font-size:12px;color:var(--gray)">ARCHIVE: {{ site.posts | size }} ENTRIES</p>
     </div>
+    {% assign total = site.posts | size %}
+    {% if total < 2 %}{% assign shown = total %}{% else %}{% assign shown = 2 %}{% endif %}
     <div class="findings">
-      {% for post in site.posts %}
-      <a class="finding" href="{{ post.url }}">
-        <div class="f-top">
-          <span class="f-id">WRITE-{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
-          <span class="sev sev-crit">{{ post.date | date: "%Y" }}</span>
-        </div>
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
-        <div class="f-tags">
-          {% assign cats = post.categories | join: ' ' | replace: ',', '' | split: ' ' | uniq %}
-          {% for cat in cats %}<span>{{ cat }}</span>{% endfor %}
-        </div>
-      </a>
+      {% for post in site.posts limit: 2 %}
+        {% include post-card.html post=post index=forloop.index %}
       {% endfor %}
+      {% assign rem = shown | modulo: 2 %}
+      {% if rem == 1 %}<div class="finding is-empty" aria-hidden="true"></div>{% endif %}
     </div>
+    {% if total > 2 %}
+    <a class="more-link" href="/writing/">View all {{ total }} entries &rarr;</a>
+    {% endif %}
   </div>
 </section>
 

@@ -1,0 +1,12 @@
+<a class="finding" href="{{ include.post.url }}">
+  <div class="f-top">
+    <span class="f-id">WRITE-{{ include.index | prepend: '0' | slice: -2, 2 }}</span>
+    <span class="sev sev-crit">{{ include.post.date | date: "%Y" }}</span>
+  </div>
+  <h3>{{ include.post.title }}</h3>
+  <p>{{ include.post.excerpt | strip_html | truncate: 180 }}</p>
+  <div class="f-tags">
+    {% assign cats = include.post.categories | join: ' ' | replace: ',', '' | split: ' ' | uniq %}
+    {% for cat in cats %}<span>{{ cat }}</span>{% endfor %}
+  </div>
+</a>
