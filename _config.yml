@@ -1,0 +1,13 @@
+title: "D. Esterhuizen — Offensive Security"
+description: "Independent offensive security consultant — MongoDB · Red Team · Cloud · AI/LLM"
+url: "https://desterhuizen.uk"
+permalink: /writing/:title/
+markdown: kramdown
+
+# Build settings
+exclude:
+  - example.html
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
