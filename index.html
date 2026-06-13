@@ -39,7 +39,7 @@ layout: default
     <div class="sec-head">
       <div>
         <p class="eyebrow">Capabilities</p>
-        <h2>Four ways your environment gets tested.</h2>
+        <h2>Six ways your environment gets tested.</h2>
       </div>
       <p class="mono" style="font-size:12px;color:var(--gray)">FORMAT: FINDING-STYLE</p>
     </div>
@@ -67,6 +67,18 @@ layout: default
         <h3>AI / LLM Security</h3>
         <p>Adversarial testing of LLM-backed applications: prompt injection, data leakage, tool-abuse chains, and the trust boundaries between your model, your data, and your users.</p>
         <div class="f-tags"><span>Prompt injection</span><span>RAG pipelines</span><span>Agent tooling</span></div>
+      </article>
+      <article class="finding">
+        <div class="f-top"><span class="f-id">SVC-05</span><span class="sev sev-crit">Whitebox</span></div>
+        <h3>Source Code Review &amp; Exploitation</h3>
+        <p>Manual, white-box review of your application source: logic flaws, authentication bypasses, injection, unsafe deserialization, and the insecure data flows scanners walk straight past. Every finding proven with a working exploit, not a static-analysis maybe.</p>
+        <div class="f-tags"><span>White-box</span><span>Logic flaws</span><span>Auth bypass</span><span>Injection</span><span>Deserialization</span></div>
+      </article>
+      <article class="finding">
+        <div class="f-top"><span class="f-id">SVC-06</span><span class="sev sev-crit">Binary</span></div>
+        <h3>Binary Exploitation</h3>
+        <p>Reverse engineering and exploitation of compiled applications and native services: memory-corruption bugs, unsafe parsing, and the trust boundaries inside the binaries your security depends on. From root cause to a reliable proof-of-concept.</p>
+        <div class="f-tags"><span>Reverse engineering</span><span>Memory corruption</span><span>Fuzzing</span><span>ROP / mitigations</span></div>
       </article>
     </div>
   </div>
