@@ -1,8 +1,17 @@
 title: "Dawid Esterhuizen"
 description: "Cloud security governance at organisation scale. OSCE3, OSCP, OSDA."
 url: "https://desterhuizen.uk"
-permalink: /writing/:title/
+permalink: /experiments/:title/
 markdown: kramdown
+
+plugins:
+  - jekyll-redirect-from
+
+# Post types, in the order they are grouped under EXPERIMENTS.
+experiment_types:
+  - article
+  - writeup
+  - exploit
 
 # Build settings
 exclude:

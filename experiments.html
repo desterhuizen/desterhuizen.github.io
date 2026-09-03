@@ -1,0 +1,35 @@
+---
+layout: default
+title: Experiments
+permalink: /experiments/
+description: "Articles, write-ups and exploit work from Dawid Esterhuizen."
+redirect_from:
+  - /writing/
+---
+
+<section class="w sec name">
+  <h2 class="lab">Name</h2>
+  <div class="body">
+    <h1>experiments</h1>
+    <p class="dash"><span class="kw">desterhuizen</span><span class="em">&#8212;</span>articles, write-ups and exploit work</p>
+  </div>
+</section>
+
+{% for t in site.experiment_types %}
+  {% assign group = site.posts | where: "type", t %}
+  {% if group.size > 0 %}
+<section class="w sec">
+  <h2 class="lab">{{ t }}</h2>
+  <div class="body see">
+    {% for post in group %}{% include post-card.html post=post %}{% endfor %}
+  </div>
+</section>
+  {% endif %}
+{% endfor %}
+
+<section class="w sec" style="border-bottom:none">
+  <h2 class="lab">See also</h2>
+  <div class="body">
+    <p><a class="back" href="/">&#8592; man desterhuizen</a></p>
+  </div>
+</section>

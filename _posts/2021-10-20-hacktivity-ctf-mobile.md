@@ -3,6 +3,9 @@ layout: post
 title:  "H@cktivitycon 2021 - Mobile challenge writeup"
 date:   2021-10-20 20:00:00 +0100
 categories: security, ctf
+type:   writeup
+redirect_from:
+  - /writing/hacktivity-ctf-mobile/
 ---
 
 
