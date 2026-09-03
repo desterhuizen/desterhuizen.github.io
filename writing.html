@@ -2,26 +2,27 @@
 layout: default
 title: Writing
 permalink: /writing/
-description: "Writing & research — notes from the field on offensive security."
+description: "Writing and research from Dawid Esterhuizen — notes on offensive security."
 ---
 
-<section class="post-header">
-  <div class="wrap">
-    <p class="eyebrow">Writing / Research</p>
-    <h1>Notes from the field.</h1>
-    <p class="post-meta"><span>{{ site.posts | size }} ENTRIES</span></p>
+<section class="w sec name">
+  <h2 class="lab">Name</h2>
+  <div class="body">
+    <h1>writing</h1>
+    <p class="dash"><span class="kw">desterhuizen</span><span class="em">&#8212;</span>notes from the field</p>
   </div>
 </section>
 
-<section style="border-top:none;padding-top:48px">
-  <div class="wrap">
-    <div class="findings">
-      {% for post in site.posts %}
-        {% include post-card.html post=post index=forloop.index %}
-      {% endfor %}
-      {% assign rem = site.posts | size | modulo: 2 %}
-      {% if rem == 1 %}<div class="finding is-empty" aria-hidden="true"></div>{% endif %}
-    </div>
-    <a class="more-link" href="/#writing">&larr; Back to home</a>
+<section class="w sec">
+  <h2 class="lab">Index</h2>
+  <div class="body see">
+    {% for post in site.posts %}{% include post-card.html post=post %}{% endfor %}
+  </div>
+</section>
+
+<section class="w sec" style="border-bottom:none">
+  <h2 class="lab">See also</h2>
+  <div class="body">
+    <p><a class="back" href="/#see-also">&#8592; man desterhuizen</a></p>
   </div>
 </section>

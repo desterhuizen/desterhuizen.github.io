@@ -2,199 +2,254 @@
 layout: default
 ---
 
-<!-- HERO — styled as a report cover -->
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-meta">
-      <span class="stamp">Offensive Security</span>
-      <span class="mono-line">REF: ENG-2026-001</span>
-      <span class="mono-line">REGION: EMEA / GLOBAL</span>
-      <span class="mono-line">STATUS: ACCEPTING ENGAGEMENTS</span>
-    </div>
-    <h1>I find the <span class="redact" tabindex="0">attack paths</span> in your <span class="redact" tabindex="0">crown jewels</span> before someone else does.</h1>
-    <p class="hero-sub">Independent offensive security consultant. Twenty years of engineering, eight of them deep inside MongoDB. I break database deployments, cloud estates, and AI systems under controlled conditions — then hand you the fix.</p>
-    <div class="hero-cta">
-      <a class="btn btn-solid" href="#contact">Request an engagement</a>
-      <a class="btn btn-ghost" href="#services">View capabilities</a>
-    </div>
-    <p class="redact-note">// hover the redactions — disclosure is always controlled</p>
-
-    <div class="certs" role="list" aria-label="Certifications">
-      <div>Credentials</div>
-      <div role="listitem" class="cert-hl">OSCE³</div>
-      <div role="listitem">OSEP</div>
-      <div role="listitem">OSWE</div>
-      <div role="listitem">OSED</div>
-      <div role="listitem">OSCP</div>
-      <div role="listitem">OSDA</div>
-      <div role="listitem">OSWP</div>
-      <div role="listitem">CEH Master</div>
-    </div>
+<section class="w sec name" id="name">
+  <h2 class="lab">Name</h2>
+  <div class="body">
+    <h1>dawid-esterhuizen</h1>
+    <p class="dash"><span class="kw">desterhuizen</span><span class="em">&#8212;</span>cloud security governance at organisation scale</p>
   </div>
 </section>
 
-<!-- SERVICES as findings -->
-<section id="services">
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <p class="eyebrow">Capabilities</p>
-        <h2>Five ways your environment gets tested.</h2>
-      </div>
-      <p class="mono" style="font-size:12px;color:var(--gray)">FORMAT: FINDING-STYLE</p>
-    </div>
-    <div class="findings">
-      <article class="finding">
-        <div class="f-top"><span class="f-id">SVC-01</span><span class="sev sev-crit">Regulated</span></div>
-        <h3>Red Team Operations</h3>
-        <p>Threat-intelligence-led adversary simulation for regulated environments. Built for TIBER-EU, DORA, and CBEST contexts — scoped, evidenced, and reported to the standard your regulator expects.</p>
-        <div class="f-tags"><span>TIBER-EU</span><span>DORA</span><span>CBEST</span><span>Purple team</span></div>
-      </article>
-      <article class="finding">
-        <div class="f-top"><span class="f-id">SVC-02</span><span class="sev sev-crit">Cloud</span></div>
-        <h3>Cloud Security Architecture</h3>
-        <p>Offensive review of AWS, Azure, and GCP estates: identity boundaries, privilege escalation paths, data-exfiltration routes, and the cross-account trust relationships nobody documented.</p>
-        <div class="f-tags"><span>AWS</span><span>Azure</span><span>GCP</span><span>IAM attack paths</span></div>
-      </article>
-      <article class="finding">
-        <div class="f-top"><span class="f-id">SVC-03</span><span class="sev sev-crit">Emerging</span></div>
-        <h3>AI / LLM Security</h3>
-        <p>Adversarial testing of LLM-backed applications: prompt injection, data leakage, tool-abuse chains, and the trust boundaries between your model, your data, and your users.</p>
-        <div class="f-tags"><span>Prompt injection</span><span>RAG pipelines</span><span>Agent tooling</span></div>
-      </article>
-      <article class="finding">
-        <div class="f-top"><span class="f-id">SVC-04</span><span class="sev sev-crit">Whitebox</span></div>
-        <h3>Source Code Review &amp; Exploitation</h3>
-        <p>Manual, white-box review of your application source: logic flaws, authentication bypasses, injection, unsafe deserialization, and the insecure data flows scanners walk straight past. Every finding proven with a working exploit, not a static-analysis maybe.</p>
-        <div class="f-tags"><span>White-box</span><span>Logic flaws</span><span>Auth bypass</span><span>Injection</span><span>Deserialization</span></div>
-      </article>
-      <article class="finding">
-        <div class="f-top"><span class="f-id">SVC-05</span><span class="sev sev-crit">Binary</span></div>
-        <h3>Binary Exploitation</h3>
-        <p>Reverse engineering and exploitation of compiled applications and native services: memory-corruption bugs, unsafe parsing, and the trust boundaries inside the binaries your security depends on. From root cause to a reliable proof-of-concept.</p>
-        <div class="f-tags"><span>Reverse engineering</span><span>Memory corruption</span><span>Fuzzing</span><span>ROP / mitigations</span></div>
-      </article>
-    </div>
+<section class="w sec" id="synopsis">
+  <h2 class="lab">Synopsis</h2>
+  <div class="body">
+<pre class="block"><span class="kw">desterhuizen</span> [<span class="fl">--cloud-governance</span>] [<span class="fl">--aws</span>] [<span class="fl">--appsec</span>]
+             [<span class="fl">--exploit-dev</span>] [<span class="fl">--red-team</span>] [<span class="fl">--tooling</span>]
+
+<span class="kw">desterhuizen</span> <span class="fl">--based</span> <span class="st">netherlands</span> <span class="fl">--tz</span> <span class="st">CET</span> <span class="fl">--since</span> <span class="nm">2006</span></pre>
   </div>
 </section>
 
-<!-- METHOD -->
-<section id="method">
-  <div class="wrap method">
+<section class="w sec" id="description">
+  <h2 class="lab">Description</h2>
+  <div class="body">
+    <p>I set the cloud and security governance that MongoDB's Professional Services organisation
+    runs on. I also hold <b>OSCE&#179;, OSCP and OSDA</b> &#8212; so I know how the controls I write
+    fail under attack.</p>
+    <p>Most security leaders inherit their threat model. I built mine: two years pentesting
+    MongoDB's own internal tools white-box and black-box, and two years on the <b>Synack Red
+    Team</b>. I write and release my own tooling &#8212; exploit development and ROP scripts,
+    payload generation, and a provisioning framework for reproducible penetration testing
+    workstations.</p>
+    <p>Before this: twenty years building the systems I now secure. Game backends at Arooga and
+    SEGA Europe, and primary AWS administrator on every estate I have run since 2013.</p>
+    <p>I also hold an MBA. Mostly it is useful for one thing &#8212; explaining to the people who
+    control budgets why a finding matters, in their language rather than mine.</p>
+  </div>
+</section>
+
+<section class="w sec" id="options">
+  <h2 class="lab">Options</h2>
+  <div class="body opts">
     <div>
-      <p class="eyebrow">Method</p>
-      <h2>Engagements run like operations, not audits.</h2>
+      <p class="of">--cloud-policy-framework</p>
+      <p>Defines how every consulting engineer operates in cloud environments, with automated
+      tooling that enforces it. Corporate Cloud Security is rolling parts of it out globally.</p>
     </div>
-    <div class="method-steps">
-      <div class="step">
-        <span class="mono">PHASE 01</span>
-        <div><h3>Scope &amp; rules of engagement</h3><p>Targets, exclusions, escalation contacts, and legal authorization agreed in writing before a single packet moves.</p></div>
-      </div>
-      <div class="step">
-        <span class="mono">PHASE 02</span>
-        <div><h3>Reconnaissance &amp; threat modeling</h3><p>Your environment mapped the way an adversary would map it — externally first, assumptions last.</p></div>
-      </div>
-      <div class="step">
-        <span class="mono">PHASE 03</span>
-        <div><h3>Controlled exploitation</h3><p>Attack paths executed under agreed constraints, with full evidence capture and no production surprises.</p></div>
-      </div>
-      <div class="step">
-        <span class="mono">PHASE 04</span>
-        <div><h3>Reporting &amp; remediation</h3><p>Findings ranked by real exploitability, each with a reproduction path and a concrete fix. Debrief with your engineers, not just your auditors.</p></div>
-      </div>
-      <div class="step">
-        <span class="mono">PHASE 05</span>
-        <div><h3>Retest</h3><p>Fixes verified, residual risk stated plainly, report closed out.</p></div>
-      </div>
+    <div>
+      <p class="of">--portal</p>
+      <p>Built and own the platform used daily for onboarding, training management and spend
+      monitoring. It replaced a manual process.</p>
+    </div>
+    <div>
+      <p class="of">--tradecraft</p>
+      <p>Rebuilt the lab curriculum around real production deployments, and run architecture and
+      cloud design reviews for consulting engineers and partners worldwide.</p>
+    </div>
+    <div>
+      <p class="of">--security-posture</p>
+      <p>Work alongside InfoSec, Cloud Security and the Red Team, and on the security design of
+      internal tools with the Search, Vector Search and AI teams.</p>
     </div>
   </div>
 </section>
 
-<!-- TRACK RECORD -->
-<section id="proof" class="proof">
-  <div class="wrap">
-    <p class="eyebrow">Track record</p>
-    <h2>Background that doesn't need embellishing.</h2>
-    <div class="proof-grid">
-      <div class="proof-cell"><div class="big">20<em>+</em></div><div class="lbl">Years in software &amp; security engineering</div></div>
-      <div class="proof-cell"><div class="big">8</div><div class="lbl">Years at MongoDB Inc., Principal level</div></div>
-      <div class="proof-cell"><div class="big">OSCE<em>³</em></div><div class="lbl">8 offensive security certifications incl. OSEP, OSWE &amp; OSED</div></div>
-      <div class="proof-cell"><div class="big"><em>SRT</em></div><div class="lbl">Synack Red Team researcher</div></div>
-      <div class="proof-cell"><div class="big">MDB<em>W</em></div><div class="lbl">MongoDB World speaker — "Hack the MongoDB Planet!!"</div></div>
-      <div class="proof-cell"><div class="big">EMEA</div><div class="lbl">Netherlands-based, available globally</div></div>
-    </div>
+<section class="w sec" id="repositories">
+  <h2 class="lab">Repositories</h2>
+  <div class="body repo">
+    <a class="repo-link" href="https://github.com/desterhuizen/w1ld0s">
+      <div class="rh"><h3>~/w1ld0s</h3><span class="rs">Bash &#183; AGPL-3.0</span></div>
+      <p>Idempotent bash provisioning for a reproducible Ubuntu 26.04 penetration testing
+      workstation. Seventeen modules, per-tool Python virtualenvs, and declarative manifests acting
+      as lock files &#8212; built to avoid the dependency conflicts that come with pre-packaged
+      offensive distributions.</p>
+    </a>
+    <a class="repo-link" href="https://github.com/desterhuizen/w1ld0s-tools">
+      <div class="rh"><h3>~/w1ld0s-tools</h3><span class="rs">Bash &#183; AGPL-3.0</span></div>
+      <p>Operator command layer on top of w1ld0s &#8212; recon, access, infrastructure and Active
+      Directory workflows, per-engagement state, and offline cheatsheets. Deliberately separate:
+      the workstation changes rarely, the operator tooling changes weekly.</p>
+    </a>
+    <a class="repo-link" href="https://github.com/desterhuizen/exploit-tools">
+      <div class="rh"><h3>~/exploit-tools</h3><span class="rs">Python</span></div>
+      <p>Exploit development tooling, focused on Return Oriented Programming.</p>
+    </a>
+    <a class="repo-link" href="https://github.com/desterhuizen/exploit-development-scripts">
+      <div class="rh"><h3>~/exploit-development-scripts</h3><span class="rs">Python</span></div>
+      <p>Scripts used when reverse engineering and doing exploit development.</p>
+    </a>
+    <a class="repo-link" href="https://github.com/desterhuizen/payloader">
+      <div class="rh"><h3>~/payloader</h3><span class="rs">Python</span></div>
+      <p>Payload generation from a simple CLI, for faster access to custom payloads.</p>
+    </a>
   </div>
 </section>
 
-<!-- ENGAGEMENT MODELS -->
-<section id="engage">
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <p class="eyebrow">Engagement models</p>
-        <h2>Three ways to work together.</h2>
-      </div>
-    </div>
-    <div class="eng">
-      <div class="eng-card">
-        <h3>Fixed-scope assessment</h3>
-        <p>Defined targets, defined timeline, defined deliverable. Best for source code reviews, cloud architecture assessments, and AI/LLM testing.</p>
-        <span class="mono">TYPICAL: 1–3 WEEKS</span>
-      </div>
-      <div class="eng-card">
-        <h3>Red team operation</h3>
-        <p>Intelligence-led, objective-based campaigns for regulated entities. Solo or embedded in your provider's team under TIBER-EU / CBEST frameworks.</p>
-        <span class="mono">TYPICAL: 4–12 WEEKS</span>
-      </div>
-      <div class="eng-card">
-        <h3>Retained advisory</h3>
-        <p>Ongoing offensive security counsel: architecture reviews, threat modeling, secure design input, and on-call expertise for your engineering teams.</p>
-        <span class="mono">TYPICAL: MONTHLY RETAINER</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WRITING / RESEARCH -->
-<section id="writing">
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <p class="eyebrow">Writing / Research</p>
-        <h2>Notes from the field.</h2>
-      </div>
-      <p class="mono" style="font-size:12px;color:var(--gray)">ARCHIVE: {{ site.posts | size }} ENTRIES</p>
-    </div>
-    {% assign total = site.posts | size %}
-    {% if total < 2 %}{% assign shown = total %}{% else %}{% assign shown = 2 %}{% endif %}
-    <div class="findings">
-      {% for post in site.posts limit: 2 %}
-        {% include post-card.html post=post index=forloop.index %}
-      {% endfor %}
-      {% assign rem = shown | modulo: 2 %}
-      {% if rem == 1 %}<div class="finding is-empty" aria-hidden="true"></div>{% endif %}
-    </div>
-    {% if total > 2 %}
-    <a class="more-link" href="/writing/">View all {{ total }} entries &rarr;</a>
-    {% endif %}
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <div class="wrap">
-    <div class="contact-box">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2>Scope a controlled breach.</h2>
-        <div class="contact-meta">
-          <div><b>EMAIL</b> &nbsp;contact@desterhuizen.uk</div>
-          <div><b>BASE</b> &nbsp;Netherlands · CET</div>
-          <div><b>RANGE</b> &nbsp;Remote-first · on-site across EMEA &amp; global</div>
-          <div><b>PGP</b> &nbsp;Key available on request</div>
+<section class="w sec" id="history">
+  <h2 class="lab">History</h2>
+  <div class="body">
+    <ol class="hist">
+      <li>
+        <span class="yr now">2026 &#8212;</span>
+        <div>
+          <h3>Distinguished Consulting Engineer</h3>
+          <p class="org">MongoDB</p>
+          <p>Technical direction for Professional Services cloud infrastructure, security posture
+          and enablement across the organisation.</p>
         </div>
-      </div>
-      <a class="btn btn-solid" href="mailto:contact@desterhuizen.uk">Start the conversation</a>
+      </li>
+      <li>
+        <span class="yr">2024 &#8211; 26</span>
+        <div>
+          <h3>Principal Service Delivery Enablement Engineer</h3>
+          <p class="org">MongoDB</p>
+          <p>Took ownership of cloud infrastructure for the whole Professional Services department
+          &#8212; creating, enforcing and monitoring cloud policy, and building the tooling behind
+          it.</p>
+        </div>
+      </li>
+      <li>
+        <span class="yr">2023 &#8211; 25</span>
+        <div>
+          <h3>Red Team Member</h3>
+          <p class="org">Synack Red Team</p>
+          <p>Targeted penetration tests within Synack's engagement scopes, using standard tooling
+          and custom tools I wrote. <span class="aside">Discretionary time; not primary
+          employment.</span></p>
+        </div>
+      </li>
+      <li>
+        <span class="yr">2022 &#8211; 24</span>
+        <div>
+          <h3>Information Security Engineer II</h3>
+          <p class="org">MongoDB</p>
+          <p>White-box and black-box pentests of internally developed tools and products. Started a
+          monthly offensive hackathon and built most of the challenges; carried L1 incidents on the
+          on-call rota.</p>
+        </div>
+      </li>
+      <li>
+        <span class="yr">2014 &#8211; 18</span>
+        <div>
+          <h3>Senior Server Engineer</h3>
+          <p class="org">SEGA Europe</p>
+          <p>Backend for <em>Kingdom Conquest 3</em>, primary AWS administrator for the studio
+          estate, and a high-throughput analytics pipeline for future titles.</p>
+        </div>
+      </li>
+      <li>
+        <span class="yr">2013 &#8211; 14</span>
+        <div>
+          <h3>Director of Server Technology</h3>
+          <p class="org">Arooga</p>
+          <p>Owned server technology across IaaS estates &#8212; including the auto-scaling behind
+          <em>Robocraft</em>, built to scale down without users noticing.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="w sec" id="certifications">
+  <h2 class="lab">Certifications</h2>
+  <div class="body reg-wrap">
+    <table class="reg">
+      <thead>
+        <tr><th scope="col">Code</th><th scope="col">Certification</th><th scope="col">Issuer</th><th scope="col">Earned</th></tr>
+      </thead>
+      <tbody>
+        <tr class="lead">
+          <td><a class="code" href="https://www.credential.net/7bb50d66-17ec-478f-8e65-beca4c9c01d7#acc.uklH7zGP">OSCE&#179;</a></td>
+          <td class="full">Offensive Security Certified Expert 3</td>
+          <td class="iss">OffSec</td>
+          <td class="when">Apr 2026 <span class="vf" aria-hidden="true">&#8599;</span></td>
+        </tr>
+        <tr>
+          <td><a class="code" href="https://www.credential.net/ea75f778-3c3c-4a84-9a0d-1ea6c284774c#acc.t8Sb24de">OSED</a></td>
+          <td class="full">Exploit Developer</td>
+          <td class="iss">OffSec</td>
+          <td class="when">Apr 2026 <span class="vf" aria-hidden="true">&#8599;</span></td>
+        </tr>
+        <tr>
+          <td><a class="code" href="https://credentials.offsec.com/7fa37a81-4483-4aec-a9cc-2c358300ed73#acc.7OKmIUWN">OSEP</a></td>
+          <td class="full">Experienced Penetration Tester</td>
+          <td class="iss">OffSec</td>
+          <td class="when">May 2025 <span class="vf" aria-hidden="true">&#8599;</span></td>
+        </tr>
+        <tr>
+          <td><a class="code" href="https://www.credential.net/a8cca4f5-bd0d-41f2-9bb1-6f42a78422e9#acc.NFxtsu1y">OSDA</a></td>
+          <td class="full">Defense Analyst</td>
+          <td class="iss">OffSec</td>
+          <td class="when">Nov 2024 <span class="vf" aria-hidden="true">&#8599;</span></td>
+        </tr>
+        <tr>
+          <td><a class="code" href="https://www.credential.net/133473b9-c398-4fae-8293-a14b3b824b2c">OSWP</a></td>
+          <td class="full">Wireless Professional</td>
+          <td class="iss">OffSec</td>
+          <td class="when">Apr 2024 <span class="vf" aria-hidden="true">&#8599;</span></td>
+        </tr>
+        <tr>
+          <td><a class="code" href="https://www.credential.net/044a74c1-a4fe-4d7a-8660-e2f1b55814d4">OSWE</a></td>
+          <td class="full">Web Expert</td>
+          <td class="iss">OffSec</td>
+          <td class="when">Feb 2024 <span class="vf" aria-hidden="true">&#8599;</span></td>
+        </tr>
+        <tr>
+          <td><a class="code" href="https://www.credential.net/e44015c7-975a-484f-a222-0054c683e745">OSCP</a></td>
+          <td class="full">Certified Professional</td>
+          <td class="iss">OffSec</td>
+          <td class="when">Apr 2023 <span class="vf" aria-hidden="true">&#8599;</span></td>
+        </tr>
+        <tr>
+          <td><a class="code" href="https://aspen.eccouncil.org/VerifyBadge?type=certification&amp;a=VVUr2sh+obJViSmBkqkrXbilwSG7bu8Nqr+9ZhZ2aME=">CEH Master</a></td>
+          <td class="full">Certified Ethical Hacker (Master)</td>
+          <td class="iss">EC-Council</td>
+          <td class="when">to Sep 2027 <span class="vf" aria-hidden="true">&#8599;</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="w sec" id="see-also">
+  <h2 class="lab">See also</h2>
+  <div class="body see">
+    <a href="https://www.youtube.com/watch?v=_0TYUG3ic4A">
+      <h3>Hack the MongoDB Planet!</h3>
+      <span class="src">MongoDB World &#183; Jun 2022</span>
+    </a>
+    <a href="https://www.mongodb.com/company/blog/technical/hack-common-security-issues-fix-them">
+      <h3>4 Common Misconceptions About Security</h3>
+      <span class="src">MongoDB blog &#183; Aug 2022</span>
+    </a>
+    <a href="https://tryhackme.com/resources/blog/desterhuizen-red-team-capstone-write-up">
+      <h3>Red Team Capstone Write-Up</h3>
+      <span class="src">TryHackMe &#183; May 2023</span>
+    </a>
+    {% for post in site.posts %}{% include post-card.html post=post %}{% endfor %}
+  </div>
+</section>
+
+<section class="w sec" id="author">
+  <h2 class="lab">Author</h2>
+  <div class="body">
+    <div class="auth">
+      <div><a href="mailto:contact@desterhuizen.uk"><span class="k">email</span><span class="val">contact@desterhuizen.uk</span></a></div>
+      <div><a href="https://github.com/desterhuizen"><span class="k">github</span><span class="val">github.com/desterhuizen</span></a></div>
+      <div><a href="https://www.linkedin.com/in/desterhuizen/"><span class="k">linkedin</span><span class="val">linkedin.com/in/desterhuizen</span></a></div>
+      <div><a href="https://app.hackthebox.com/public/users/100799"><span class="k">hackthebox</span><span class="val">desterhuizen</span></a></div>
+      <div><a href="https://tryhackme.com/p/desterhuizen"><span class="k">tryhackme</span><span class="val">desterhuizen</span></a></div>
     </div>
+    <p style="margin-top:20px;font-size:14px">Opinions here are my own, not my employer's.</p>
   </div>
 </section>
