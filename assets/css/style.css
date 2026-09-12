@@ -109,6 +109,8 @@ header{
 }
 .dash{font-family:var(--mono);font-size:13.5px;color:var(--fg2);margin-top:12px}
 .dash .em{color:var(--fg3);margin:0 8px}
+.dash a{color:var(--blue)}
+.dash a:hover{color:var(--cyan)}
 
 /* code block */
 pre.block{

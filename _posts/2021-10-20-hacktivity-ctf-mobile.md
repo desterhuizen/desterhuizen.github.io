@@ -4,6 +4,7 @@ title:  "H@cktivitycon 2021 - Mobile challenge writeup"
 date:   2021-10-20 20:00:00 +0100
 categories: security, ctf
 type:   writeup
+medium: https://desterhuizen.medium.com/h-cktivitycon-2021-mobile-challenge-writeup-2e1a8b0bc9d6
 redirect_from:
   - /writing/hacktivity-ctf-mobile/
 ---

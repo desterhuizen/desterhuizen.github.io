@@ -10,6 +10,7 @@ layout: default
       <span class="nm">{{ page.date | date: "%Y-%m-%d" }}</span>
       {% assign cats = page.categories | join: ' ' | replace: ',', '' | split: ' ' | uniq %}
       {% for cat in cats %}<span class="em">&#183;</span><span class="st">{{ cat }}</span>{% endfor %}
+      {% if page.medium %}<span class="em">&#183;</span><a href="{{ page.medium }}" target="_blank" rel="noopener noreferrer">also on Medium</a>{% endif %}
     </p>
   </div>
 </section>
