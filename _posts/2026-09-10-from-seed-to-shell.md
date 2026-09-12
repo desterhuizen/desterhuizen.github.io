@@ -371,11 +371,7 @@ give `target_builder`, the list we filter gadgets with and the list `shellgen` a
 one list in one format. There are 1,113 tests across the suite, 530 of them in the ROP
 tooling, weighted towards the parts where a silent wrong answer costs us an afternoon.
 
-Twenty-one of those tests did not exist a day ago, and none of the ones that did caught the
-`0x20`. Every test asked whether the encoder rewrote the constants it was given, and the
-bug was in the assembly nobody thought of as having constants in it. That is the honest
-shape of a test suite, it covers the failures we already thought of. Using the thing found
-this one. The whole thing is AGPL-3.0.
+The whole thing is AGPL-3.0.
 
 # Conclusion
 
