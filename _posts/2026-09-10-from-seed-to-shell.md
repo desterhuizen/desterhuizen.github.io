@@ -4,6 +4,7 @@ title:  "From a Seed to a Shell"
 date:   2026-09-10 09:00:00 +0100
 categories: security, exploit-dev
 type:   article
+medium: https://desterhuizen.medium.com/from-a-seed-to-a-shell-4c9966d227cf
 description: "Generating a vulnerable Windows server from a seed and walking it all the way to a reverse shell, using the four tools in exploit-tools and fixing the one that got it wrong."
 ---
 
